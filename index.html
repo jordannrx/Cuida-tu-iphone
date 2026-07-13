@@ -1,19 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mi página web</title>
 <meta charset="UTF-8">
+<title>JordannRX Oficial</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0f;
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 80px;
+    animation: aparecer 2s ease, brillo 3s infinite;
+}
+
+.subtitulo {
+    font-size: 20px;
+    opacity: 0;
+    animation: aparecer 2s ease forwards;
+    animation-delay: 1s;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: scale(1.1);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes brillo {
+    0%,100% {
+        text-shadow: 0 0 10px white;
+    }
+    50% {
+        text-shadow: 0 0 30px #00ffff;
+    }
+}
+</style>
+
 </head>
 
 <body>
 
-<h1>Bienvenido a mi página</h1>
+<div class="logo">
+JordannRX
+</div>
 
-<p>Esta página fue creada por mí.</p>
+<p class="subtitulo">
+Página oficial • Historias • Proyectos • Creaciones
+</p>
 
-<h2>Mis proyectos</h2>
-
-<p>Aquí irán mis historias, diseños y contenido.</p>
+<a class="boton" href="#">
+Entrar
+</a>
 
 </body>
 </html>
