@@ -13,7 +13,30 @@
 #tiempo {
     font-size: 28px;
     font-weight: bold;
+.bienvenida {
+    margin-top: 80px;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: aparecerSeccion 1.5s ease forwards;
+    animation-delay: 0.5s;
 }
+
+.bienvenida h2 {
+    font-size: 35px;
+}
+
+.bienvenida p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+@keyframes aparecerSeccion {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}}
 <style>
 body {
     margin: 0;
@@ -146,7 +169,16 @@ Historias • Creaciones • Proyectos oficiales
 
 <a class="boton" href="#">
 Entrar
-</a>
+</a><section id="inicio" class="bienvenida">
+
+<h2>Bienvenido a JordannRX</h2>
+
+<p>
+Aquí aprenderás a cuidar tu iPhone como un profesional,
+descubrir trucos, consejos y formas de aprovechar al máximo tu dispositivo.
+</p>
+
+</section>
 <section class="proyectos">
 <div class="contador">
 <h2>Lanzamiento oficial</h2>
