@@ -190,11 +190,30 @@
       </div>
     </section>
 
-      <!-- Lanzamiento y Proyectos -->
+          <!-- Lanzamiento y Proyectos -->
     <section class="proyectos">
-      <div class="contador">
+      <div id="seccion-contador" class="contador">
         <h2>Lanzamiento oficial</h2>
         <p id="tiempo">Cargando...</p>
+      </div>
+
+      <!-- Este bloque está oculto y se mostrará solo cuando el contador llegue a cero -->
+      <div id="tips-lanzamiento" style="display: none; margin-top: 50px;">
+        <h2>🔥 Primeros Tips de Cuidado</h2>
+        <div class="tarjetas">
+          <div class="tarjeta">
+            <h3>🔋 Regla 20-80%</h3>
+            <p>Mantén tu carga entre el 20% y el 80%. Evita descargas completas para prolongar la vida útil de tu batería.</p>
+          </div>
+          <div class="tarjeta">
+            <h3>☀️ Evita el Calor</h3>
+            <p>No expongas tu iPhone a temperaturas extremas ni lo uses para jugar pesado mientras se carga.</p>
+          </div>
+          <div class="tarjeta">
+            <h3>🔌 Usa Cables MFi</h3>
+            <p>Los cargadores genéricos dañan los componentes internos. Prioriza accesorios originales o certificados.</p>
+          </div>
+        </div>
       </div>
 
       <h2>Mis Proyectos</h2>
@@ -215,8 +234,10 @@
     </section>
 
 
+
   <!-- Script del contador -->
-  <script>
+    <script>
+    // Fecha de lanzamiento
     const fecha = new Date("July 16, 2026 12:00:00").getTime();
 
     const contador = setInterval(function(){
@@ -234,12 +255,17 @@
         minutos + " minutos " +
         segundos + " segundos";
 
+      // CUANDO LLEGA A CERO:
       if (distancia < 0) {
         clearInterval(contador);
-        document.getElementById("tiempo").innerHTML = "¡Ya está disponible!";
+        // Ocultamos el bloque del contador
+        document.getElementById("seccion-contador").style.display = "none";
+        // Mostramos el bloque de los primeros tips de golpe
+        document.getElementById("tips-lanzamiento").style.display = "block";
       }
     }, 1000);
   </script>
+
 
 </body>
 </html>
