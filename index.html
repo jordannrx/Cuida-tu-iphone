@@ -1,261 +1,247 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title>JRX Tech</title>
 
-
-
-  
-
-    <style>
-  #tiempo { 
-    font-size: 28px; 
-    font-weight: bold; 
-  } 
-
-  .bienvenida { 
-    margin-top: 80px; 
-    padding: 30px; 
-    opacity: 0; 
-    transform: translateY(50px); 
-    animation: aparecerSeccion 1.5s ease forwards; 
-    animation-delay: 0.5s; 
-  
-<
-  </style>
-</head>
-<body>
-  
-
-}<style>
-
-<style>.bienvenida h2 {<style>
-    font-size: 35px;
-}<style>
-<section class="consejos">
-
-<h2>Consejos iPhone</h2>
-
-<div class="tarjetas">
-
-<div class="tarjeta">
-<h3>🔋 Batería</h3>
-<p>
-Aprende hábitos para cuidar la salud de batería de tu iPhone y mantener su rendimiento.
-</p>
-</div>
-
-<div class="tarjeta">
-<h3>⚙️ iOS</h3>
-<p>
-Descubre trucos, funciones ocultas y formas de personalizar tu iPhone.
-</p>
-</div>
-
-<div class="tarjeta">
-<h3>🛡️ Protección</h3>
-<p>
-Consejos sobre seguridad, accesorios y cuidados para tu dispositivo.
-</p>
-</div>
-
-</div>
-
-</section>
-<style>.bienvenida p {
-    font-size: 20px;
-    line-height: 1.6;
-}m
-<style>
-@keyframes aparecerSeccion {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+  <style>
+    /* Estilos Generales */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #050505, #202020);
+      color: white;
+      text-align: center;
     }
-}}
-<style> .consejos {
-    margin-top: 80px;
-    padding: 20px;
-}
 
-.consejos h2 {
-    font-size: 40px;
-}
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #050505, #202020);
-    color: white;
-    text-align: center;
-}
+    .container {
+      padding: 80px 20px;
+    }
 
-.container {
-    padding: 80px 20px;
-}
-
-
-    .logo {<style>
-    font-size: 65px;
-    font-weight: 900;
-    letter-spacing: 5px;
-    font-family: Arial Black, Arial, sans-serif;
-    color: white;
-    text-transform: uppercase;
-    text-shadow:
+    /* Logo Animado con Brillo */
+    .logo {
+      font-size: 65px;
+      font-weight: 900;
+      letter-spacing: 5px;
+      font-family: Arial Black, Arial, sans-serif;
+      color: white;
+      text-transform: uppercase;
+      text-shadow:
         0 0 10px cyan,
         0 0 20px cyan,
         0 0 40px blue;
-    animation: entrada 2s ease, brillo 3s infinite;
-}
-}
+      animation: entrada 2s ease, brillo 3s infinite;
+    }
 
-.boton {<style>
-    display: inline-block;
-    margin-top: 40px;
-    padding: 15px 35px;
-    background: white;
-    color: black;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}<style>
+    /* Botón */
+    .boton {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 15px 35px;
+      background: white;
+      color: black;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-.boton:hover {<style>
-    transform: scale(1.1);
-}
+    .boton:hover {
+      transform: scale(1.1);
+    }
 
-@keyframes entrada {
-    from {
+    /* Contador y Bienvenida */
+    .contador { 
+      margin-top: 80px; 
+      padding: 30px; 
+      background: rgba(255, 255, 255, 0.1); 
+      border-radius: 20px; 
+      opacity: 0; 
+      transform: translateY(50px); 
+      animation: aparecerSeccion 1.5s ease forwards; 
+      animation-delay: 0.5s; 
+    }
+
+    #tiempo { 
+      font-size: 28px; 
+      font-weight: bold; 
+    } 
+
+    .bienvenida { 
+      margin-top: 80px; 
+      padding: 30px; 
+      opacity: 0; 
+      transform: translateY(50px); 
+      animation: aparecerSeccion 1.5s ease forwards; 
+      animation-delay: 0.5s; 
+    }
+
+    .bienvenida h2 { 
+      font-size: 35px; 
+    }
+
+    .bienvenida p { 
+      font-size: 20px; 
+      line-height: 1.6; 
+    }
+
+    /* Secciones y Tarjetas */
+    .consejos {
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    .consejos h2 {
+      font-size: 40px;
+    }
+
+    .proyectos {
+      margin-top: 80px;
+    }
+
+    .tarjetas {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .tarjeta {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      width: 220px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Animaciones */
+    @keyframes aparecerSeccion { 
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      } 
+    }
+
+    @keyframes entrada {
+      from {
         transform: translateY(-50px);
         opacity: 0;
-    }
-    to {
+      }
+      to {
         transform: translateY(0);
         opacity: 1;
+      }
     }
-}
 
-@keyframes aparecer {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes brillo {
-    50% {
+    @keyframes brillo {
+      50% {
         text-shadow: 0 0 25px cyan;
+      }
     }
-}
-.proyectos {
-    margin-top: 80px;
-}<div class="tarjeta">
-<h3>🛡️ Seguridad</h3>
-<p>
-Aprende a proteger tu iPhone, tus datos y tu privacidad con buenas prácticas.
-</p>
-</div>
-
-.tarjetas {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.tarjeta {
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    width: 220px;
-    border-radius: 20px;
-    transition: 0.3s;
-}
-
-.tarjeta:hover {
-    transform: translateY(-10px);
-}
-</style>
-
+  </style>
 </head>
-<script>
-const fecha = new Date("July 16, 2026 12:00:00").getTime();
-
-const contador = setInterval(function(){
-
-const ahora = new Date().getTime();
-const distancia = fecha - ahora;
-
-const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
-
-document.getElementById("tiempo").innerHTML =
-dias + " días " +
-horas + " horas " +
-minutos + " minutos " +
-segundos + " segundos";
-
-if (distancia < 0) {
-clearInterval(contador);
-document.getElementById("tiempo").innerHTML = "¡Ya está disponible!";
-}
-
-},1000);
-</script>
 <body>
 
-<div class="container">
+  <div class="container">
 
-<div class="logo">
-JordannRX
-</div>
+    <!-- Logo de la marca -->
+    <div class="logo">
+      JRX Tech
+    </div>
 
-<p class="descripcion">
-Historias • Creaciones • Proyectos oficiales
-</p>
+    <p class="descripcion">
+      Historias • Creaciones • Proyectos oficiales
+    </p>
 
-<a class="boton" href="#">
-Entrar
-</a><section id="inicio" class="bienvenida">
+    <a class="boton" href="#">
+      Entrar
+    </a>
 
-<h2>Bienvenido a JordannRX</h2>
+    <!-- Mensaje de bienvenida -->
+    <section id="inicio" class="bienvenida">
+      <h2>Bienvenido a JRX Tech</h2>
+      <p>
+        Aquí aprenderás a cuidar tu iPhone como un profesional,
+        descubrir trucos, consejos y formas de aprovechar al máximo tu dispositivo.
+      </p>
+    </section>
 
-<p>
-Aquí aprenderás a cuidar tu iPhone como un profesional,
-descubrir trucos, consejos y formas de aprovechar al máximo tu dispositivo.
-</p>
+    <!-- Sección de Consejos -->
+    <section class="consejos">
+      <h2>Consejos iPhone</h2>
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>🔋 Batería</h3>
+          <p>Aprende hábitos para cuidar la salud de batería de tu iPhone y mantener su rendimiento.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>⚙️ iOS</h3>
+          <p>Descubre trucos, funciones ocultas y formas de personalizar tu iPhone.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>🛡️ Protección</h3>
+          <p>Consejos sobre seguridad, accesorios y cuidados para tu dispositivo.</p>
+        </div>
+      </div>
+    </section>
 
-</section>
-<section class="proyectos">
-<div class="contador">
-<h2>Lanzamiento oficial</h2>
-<p id="tiempo">Cargando...</p>
-</div>
-<h2>Mis Proyectos</h2>
+    <!-- Lanzamiento y Proyectos -->
+    <section class="proyectos">
+      <div class="contador">
+        <h2>Lanzamiento oficial</h2>
+        <p id="tiempo">Cargando...</p>
+      </div>
 
-<div class="tarjetas">
+      <h2>Mis Proyectos</h2>
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>Historias</h3>
+          <p>Series y relatos creados por JRX Tech.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Creaciones</h3>
+          <p>Diseños, ideas y contenido original.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Próximamente</h3>
+          <p>Nuevos proyectos en desarrollo.</p>
+        </div>
+      </div>
+    </section>
 
-<div class="tarjeta">
-<h3>Historias</h3>
-<p>Series y relatos creados por JordannRX.</p>
-</div>
+  </div>
 
-<div class="tarjeta">
-<h3>Creaciones</h3>
-<p>Diseños, ideas y contenido original.</p>
-</div>
+  <!-- Script del contador -->
+  <script>
+    const fecha = new Date("July 16, 2026 12:00:00").getTime();
 
-<div class="tarjeta">
-<h3>Próximamente</h3>
-<p>Nuevos proyectos en desarrollo.</p>
-</div>
+    const contador = setInterval(function(){
+      const ahora = new Date().getTime();
+      const distancia = fecha - ahora;
 
-</div>
+      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
-</section>
-</div>
+      document.getElementById("tiempo").innerHTML =
+        dias + " días " +
+        horas + " horas " +
+        minutos + " minutos " +
+        segundos + " segundos";
+
+      if (distancia < 0) {
+        clearInterval(contador);
+        document.getElementById("tiempo").innerHTML = "¡Ya está disponible!";
+      }
+    }, 1000);
+  </script>
 
 </body>
 </html>
+ 
+    
