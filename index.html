@@ -8,7 +8,42 @@ d<!DOCTYPE html>
     padding: 25px;
     background: rgba(255,255,255,0.1);
     border-radius: 20px;
+}</style>.contador {
+    margin-top: 50px;
+    padding: 25px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+}
+
+#tiempo {
+    font-size: 28px;
+    font-weight: bold;
 }</style>
+
+.bienvenida {
+    margin-top: 80px;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: aparecerSeccion 1.5s ease forwards;
+    animation-delay: 0.5s;
+}
+
+</style>.bienvenida h2 {
+    font-size: 35px;
+}
+
+.bienvenida p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+@keyframes aparecerSeccion {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 #tiempo {
     font-size: 28px;
